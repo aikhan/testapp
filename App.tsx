@@ -1,44 +1,24 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-  View,
-  Text,
-} from 'react-native';
+import 'react-native-gesture-handler';
+import React, {StrictMode} from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import {store} from './src/app/store';
+import {Provider} from 'react-redux';
+import NavigationStack from './src/app/NavigationStack';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>This is some text</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <NavigationStack />
+      </SafeAreaView>
+    </Provider>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  container: {
+    flex: 1,
+    backgroundColor: '#1F4F8D',
   },
 });
 

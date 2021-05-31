@@ -1,0 +1,57 @@
+.container {
+  flex: 1;
+  flex-grow: 1;
+  flex-direction: column;
+  align-self: stretch;
+  background-color: #1f4f8d;
+  min-height: 150%;
+}
+
+.errorText {
+  color: red;
+  margin-left: 16;
+  margin-right: 16;
+  margin-top: 8;
+  font-size: 16;
+}
+
+.textInputContainerView {
+  align-self: center;
+  margin-top: 36;
+}
+
+.buttonNext {
+  bottom: 16;
+  align-self: stretch;
+  align-items: center;
+  height: 56px;
+  background-color: #00dcb9;
+  margin: 180px 16px 16px 16px;
+  border-radius: 4px;
+}
+
+.nextButtonLabel {
+  font-size: 16;
+  text-align: center;
+  color: #007563;
+  padding: 16px;
+}
+
+.addressLabel {
+  font-size: 26;
+  text-align: left;
+  color: white;
+  margin-left: 16;
+  font-family: SFProText-Semibold;
+  margin-top: 50;
+}
+
+.addressDetailLabel {
+  font-size: 14;
+  text-align: left;
+  color: white;
+  opacity: 0.4;
+  margin-left: 16;
+  font-family: SFProText-Regular;
+  margin-top: 6;
+}
