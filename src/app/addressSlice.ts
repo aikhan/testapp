@@ -24,7 +24,7 @@ export const addressSlice = createSlice({
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    saveAddress: (state, action: PayloadAction<AddressState>) => {
+    saveAddress: (state: AddressState, action: PayloadAction<AddressState>) => {
       state.country = action.payload.country;
       state.name = action.payload.name;
       state.street = action.payload.street;
